@@ -1,1 +1,1 @@
-sudo apt remove -y vlc
+yes | sudo pacman -Rcn vlc

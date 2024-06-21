@@ -2,18 +2,21 @@
 set -e
 
 # Needed for all installers
-sudo apt update -y
-sudo apt install -y curl git unzip
+sudo pacman -Sy
+yes | sudo pacman -S --needed curl git unzip gum base-devel yay
 
 # Ensure computer doesn't go to sleep or lock while installing
 gsettings set org.gnome.desktop.screensaver lock-enabled false
 gsettings set org.gnome.desktop.session idle-delay 0
 
 # Run installers
-for script in ~/.local/share/omakub/install/*.sh; do source $script; done
+for script in ~/.local/share/manjaromakub/install/*.sh; do
+  echo -e "Executing script $script\n"
+  source $script
+done
 
 # Upgrade everything that might ask for a reboot last
-sudo apt upgrade -y
+#sudo pacman -Syu
 
 # Revert to normal idle and lock settings
 gsettings set org.gnome.desktop.screensaver lock-enabled true

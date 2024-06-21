@@ -1,5 +1,0 @@
-#!/bin/bash
-
-source $OMAKUB_PATH/ascii.sh
-echo "" # Add spacing
-source $OMAKUB_PATH/bin/omakub-menu

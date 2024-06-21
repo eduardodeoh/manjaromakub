@@ -1,0 +1,1 @@
+yes | sudo pacman -S --needed ttf-nerd-fonts-symbols-mono wezterm

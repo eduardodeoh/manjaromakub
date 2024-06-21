@@ -1,0 +1,5 @@
+source ~/.local/share/manjaromakub/apps/zsh/configs/init
+source ~/.local/share/manjaromakub/apps/zsh/configs/alias
+source ~/.local/share/manjaromakub/apps/zsh/configs/fzf-git
+source /usr/share/zsh/manjaro-zsh-config
+

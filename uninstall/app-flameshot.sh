@@ -1,1 +1,1 @@
-sudo apt remove -y flameshot
+yes | sudo pacman -Rcn flameshot

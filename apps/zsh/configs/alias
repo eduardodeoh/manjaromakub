@@ -1,0 +1,43 @@
+# https://michaeluloth.com/neovim-switch-configs/
+alias v='nvim' # default Neovim config
+alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
+alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
+alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
+alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
+alias vl='NVIM_APPNAME=nvim-lunarvim nvim' # LunarVim
+
+vv() {
+  select config in lazyvim kickstart nvchad astrovim lunarvim
+  do NVIM_APPNAME=nvim-$config nvim $@; break; done
+}
+
+# File system
+# ---- Eza (better ls) -----
+alias ls="eza --group-directories-first --color=always --long --git --no-filesize --icons=always"
+alias lss="ls --no-time --no-user --no-permissions"
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
+# ---- Bat (better cat) ----
+alias cat="bat"
+
+# ---- Zoxide (better cd) ----
+alias cd="z"
+
+# Tools
+alias n='nvim'
+alias g='git'
+alias d='docker'
+alias lzg='lazygit'
+alias lzd='lazydocker'
+
+# Git
+alias gcm='git commit -m'
+alias gcam='git commit -a -m'
+alias gcad='git commit -a --amend'
+
+alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
+

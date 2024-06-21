@@ -1,5 +1,11 @@
-sudo apt install -y alacritty
-mkdir -p ~/.config/alacritty
-cp ~/.local/share/omakub/configs/alacritty.toml ~/.config/alacritty/alacritty.toml
-cp ~/.local/share/omakub/configs/alacritty/theme.toml ~/.config/alacritty/theme.toml
-cp ~/.local/share/omakub/configs/alacritty/font.toml ~/.config/alacritty/font.toml
+yes | sudo pacman -S --needed alacritty
+
+if [ ! -d "$HOME/.local/share/manjaromakub/apps/alacritty/themes" ]; then
+  mkdir -p ~/.local/share/manjaromakub/apps/alacritty/themes
+  git clone https://github.com/alacritty/alacritty-theme ~/.local/share/manjaromakub/apps/alacritty/themes
+fi
+
+if [ ! -d "$HOME/.config/alacritty" ]; then
+  mkdir -p ~/.config/alacritty
+  ln -sf ~/.local/share/manjaromakub/apps/alacritty/alacritty.toml ~/.config/alacritty
+fi

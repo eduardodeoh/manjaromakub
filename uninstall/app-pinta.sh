@@ -1,1 +1,1 @@
-sudo snap remove pinta
+yes | sudo pacman -Rcn pinta

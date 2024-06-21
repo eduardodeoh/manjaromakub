@@ -1,0 +1,5 @@
+import = [
+  "~/.local/share/manjaromakub/apps/alacritty/fonts/base.toml",
+  "~/.local/share/manjaromakub/apps/alacritty/themes/themes/tokyo-night.toml",
+  "~/.local/share/manjaromakub/apps/alacritty/configs/base.toml"
+]

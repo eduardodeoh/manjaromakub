@@ -1,1 +1,1 @@
-sudo apt install -y vlc
+yes | sudo pacman -S --needed vlc

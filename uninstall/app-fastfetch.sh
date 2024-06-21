@@ -1,1 +1,1 @@
-sudo apt remove -y fastfetch
+yes | sudo pacman -Rcn fastfetch
