@@ -16,3 +16,18 @@ echo -e "\xee\x82\xa0"
 https://gist.github.com/plembo/642c0b9844b952dc1fea55b43717f6ff
 https://wiki.archlinux.org/title/HiDPI
 https://ryan.himmelwright.net/post/gnome-font-scaling-script/
+
+## Arch Linux
+https://wiki.archlinux.org/title/font_configuration
+
+
+## Fonts
+https://rubjo.github.io/victor-mono/
+https://www.programmingfonts.org/
+https://www.monolisa.dev/
+
+## Check fonts
+fc-match monospace
+fc-match monospace:bold
+fc-match monospace:italic
+fc-match monospace:bold:italic
